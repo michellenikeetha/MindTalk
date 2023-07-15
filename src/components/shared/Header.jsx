@@ -2,22 +2,16 @@ import React, {Fragment} from 'react'
 import { Popover, Transition, Menu } from '@headlessui/react'
 import classNames from 'classnames'
 import { useNavigate } from 'react-router-dom'
-import { FiBell, FiSearch } from 'react-icons/fi'
+import { FiBell } from 'react-icons/fi'
 
 export default function Header() {
     const navigate = useNavigate()
     
   return (
-    <div className='bg-white h-[64px] min-h-[64px] px-4 flex justify-between items-center border-b border-gray-200'>
-        <div className='relative'>
-            <FiSearch fontSize={20} className="text-gray-400 absolute top-1/2 -translate-y-1/2 left-3" />
-            <input 
-                type="text" 
-                placeholder='Search...' 
-                className='text-sm focus:outline-none active:outline-none h-10 w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4' 
-            />
-        </div>
-        <div className='flex items-center gap-2 mr-2'>
+    <div className='bg-white w-full top-0 z-0'>
+        <div className='sm:flex md:flex float-right items-center py-4 pr-2 h-[64px] min-h-[64px]'>
+    
+            <div className='flex float-right items-center gap-2 mr-2'>
             <Popover className="relative">
                 {({ open }) => (
                     <>
@@ -52,7 +46,7 @@ export default function Header() {
             </Popover>
             <Menu as="div" className="relative">
                 <div>
-                    <Menu.Button className="ml-2 inline-flex rounded-full focus:outline-none focus:ring-2 focus:ring-neutral-400">
+                    <Menu.Button className="ml-2 inline-flex rounded-full focus:outline-none focus:ring-2 focus:ring-blue-700">
                         <span className='sr-only'>open user menu</span>
                         <div className='h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center' 
                                 style={{background: 'url("https://source.unsplash.com/50x50?face")'}}>
@@ -76,19 +70,8 @@ export default function Header() {
                                     active && 'bg-gray-100',
                                     'text-gray-700 focus:bg-gray-200 cursor-pointer rounded-sm px-4 py-2'
                                     )}
-                                    onClick={() => navigate('/profile')}>
+                                    onClick={() => navigate('/clientprofile')}>
                                     Your Profile 
-                                </div>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <div className={classNames(
-                                    active && 'bg-gray-100',
-                                    'text-gray-700 focus:bg-gray-200 cursor-pointer rounded-sm px-4 py-2'
-                                    )}
-                                    onClick={() => navigate('/settings')}>
-                                    Settings
                                 </div>
                             )}
                         </Menu.Item>
@@ -106,6 +89,7 @@ export default function Header() {
                     </Menu.Items>
               </Transition>
             </Menu>
+        </div>
         </div>
     </div>
   )

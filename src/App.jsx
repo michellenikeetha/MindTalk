@@ -22,7 +22,7 @@ function App() {
                 </Route>
                 <Route path="counsellor" element={<CounsellorLayout />}>
                     <Route index element={<CounsellorDashboard />} />
-                    <Route path="counsellorprofile" element={<CounsellorProfile />} />
+                    <Route path="counsellorprofile" element={<CounsellorProfile />} /> 
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
                 <Route path="logout" element={<div>this is logout page</div>} />

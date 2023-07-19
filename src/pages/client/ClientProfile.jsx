@@ -317,8 +317,9 @@ export default function Dashboard() {
 
         </div>
 
-        <div className="bg-white rounded-xl shadow-md overflow-hidden text-center p-5 ">
-          <div className='border-b border-gray-900/10 pb-5'>
+        <div className="bg-white rounded-xl shadow-md overflow-hidden p-5 ">
+
+          <div className='pb-5 text-center '>
             <span className="text-lg text-blue-900 ">Let us get to know about you. Upload your previous medical files if any.  </span>
             <div className="m-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-53">
               <div className="text-center">
@@ -337,6 +338,20 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
+
+          <div className='border-t border-gray-900/10 pt-3 pb-3'>
+            <span className='text-gray-400'>abc.pdf</span>
+            <span className='text-gray-400 float-right'>07/07/2023</span>
+          </div>
+          <div className='border-t border-gray-900/10 pt-3 pb-3'>
+            <span className='text-gray-400 '>abc.pdf</span>
+            <span className='text-gray-400 float-right'>07/07/2023</span>
+          </div>
+          <div className='border-t border-gray-900/10 pt-3 pb-3'>
+            <span className='text-gray-400 '>abc.pdf</span>
+            <span className='text-gray-400 float-right'>07/07/2023</span>
+          </div>
+
         </div>
 
       </div>

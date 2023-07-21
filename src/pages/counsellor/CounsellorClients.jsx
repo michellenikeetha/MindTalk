@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CounsellorProfile() {
+function CounsellorClients() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function CounsellorProfile() {
   )
 }
 
-export default CounsellorProfile
+export default CounsellorClients

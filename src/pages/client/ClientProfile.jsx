@@ -4,7 +4,7 @@ import { FiClipboard } from 'react-icons/fi';
 
 export default function Dashboard() {
   return (
-    <div className="flex flex-col gap-4 w-full grid md:grid-cols-4">
+    <div className="flex flex-col-reverse gap-4 w-full grid md:grid-cols-4">
 
       <div className="bg-white rounded-xl md:col-span-3 ">
         <div className="mx-auto grid max-w-7xl gap-x-8 px-6 lg:px-8 py-5">

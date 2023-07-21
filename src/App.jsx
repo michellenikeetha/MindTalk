@@ -1,7 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/shared/Layout'
-import Dashboard from './components/Dashboard'
-import Products from './components/Products'
+import ClientProfile from './pages/client/ClientProfile'
+import Dashboard from './pages/client/Dashboard'
+import ClientCounsellors from './pages/client/ClientCounsellors';
+import ClientMusic from './pages/client/ClientMusic';
+import ClientMeditation from './pages/client/ClientMeditation';
+import CounsellorLayout from "./components/shared/CounsellorLayout";
+import CounsellorDashboard from "./pages/counsellor/CounsellorDashboard"
+import CounsellorProfile from "./pages/counsellor/CounsellorProfile"
+import ClientCounsellorProfile from './pages/client/ClientCounsellorProfile';
+import CounsellorDoctors from './pages/counsellor/CounsellorDoctors';
+import CounsellorClients from './pages/counsellor/CounsellorClients';
+
 
 function App() {
     return (
@@ -9,9 +19,20 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Dashboard />} />
-                    <Route path="products" element={<Products />} />
+                    <Route path="clientprofile" element={<ClientProfile />} />
+                    <Route path="clientcounsellors" element={<ClientCounsellors />} />
+                    <Route path='clientmusic' element={<ClientMusic />} />
+                    <Route path='clientmeditation' element={<ClientMeditation />} />
+                    <Route path='clientcounsellors/profile' element={<ClientCounsellorProfile/>} />
+                </Route>
+                <Route path="/counsellor" element={<CounsellorLayout />}>
+                    <Route index element={<CounsellorDashboard />} />
+                    <Route path="counsellorprofile" element={<CounsellorProfile />} />
+                    <Route path='counsellordoctors' element={<CounsellorDoctors/>} />
+                    <Route path="counsellorclients" element={<CounsellorClients/>} />
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
+                <Route path="logout" element={<div>this is logout page</div>} />
             </Routes>
         </Router>
     )

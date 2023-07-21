@@ -1,64 +1,52 @@
-import {
-	HiOutlineViewGrid,
-	HiOutlineCube,
-	HiOutlineShoppingCart,
-	HiOutlineUsers,
-	HiOutlineDocumentText,
-	HiOutlineAnnotation,
-	HiOutlineQuestionMarkCircle,
-	HiOutlineCog
-} from 'react-icons/hi'
+import {FiAirplay, FiBookOpen, FiEdit, FiMessageCircle, FiMusic, FiPhone, FiSlack, FiUsers} from "react-icons/fi"
 
 export const DASHBOARD_SIDEBAR_LINKS = [
 	{
 		key: 'dashboard',
 		label: 'Dashboard',
 		path: '/',
-		icon: <HiOutlineViewGrid />
+		icon: <FiAirplay />
 	},
 	{
-		key: 'products',
-		label: 'Products',
-		path: '/products',
-		icon: <HiOutlineCube />
+		key: 'message',
+		label: 'Message',
+		path: '/message',
+		icon: <FiMessageCircle />
 	},
 	{
-		key: 'orders',
-		label: 'Orders',
-		path: '/orders',
-		icon: <HiOutlineShoppingCart />
+		key: 'calls',
+		label: 'Calls',
+		path: '/calls',
+		icon: <FiPhone />
 	},
 	{
-		key: 'customers',
-		label: 'Customers',
-		path: '/customers',
-		icon: <HiOutlineUsers />
+		key: 'counsellors',
+		label: 'Counsellors',
+		path: '/clientcounsellors',
+		icon: <FiUsers />
 	},
 	{
-		key: 'transactions',
-		label: 'Transactions',
-		path: '/transactions',
-		icon: <HiOutlineDocumentText />
+		key: 'music',
+		label: 'Music / Videos',
+		path: '/clientmusic',
+		icon: <FiMusic />
 	},
 	{
-		key: 'messages',
-		label: 'Messages',
-		path: '/messages',
-		icon: <HiOutlineAnnotation />
-	}
-]
-
-export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
-	{
-		key: 'settings',
-		label: 'Settings',
-		path: '/settings',
-		icon: <HiOutlineCog />
+		key: 'meditation',
+		label: 'Meditation',
+		path: '/clientmeditation',
+		icon: <FiSlack />
 	},
 	{
-		key: 'support',
-		label: 'Help & Support',
-		path: '/support',
-		icon: <HiOutlineQuestionMarkCircle />
+		key: 'diagnostic test',
+		label: 'Diagnostic Test',
+		path: '/diagnostictest',
+		icon: <FiEdit />
+	},
+	{
+		key: 'blogs',
+		label: 'Blogs',
+		path: '/blogs',
+		icon: <FiBookOpen />
 	}
 ]

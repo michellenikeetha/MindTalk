@@ -11,6 +11,7 @@ import CounsellorProfile from "./pages/counsellor/CounsellorProfile"
 import ClientCounsellorProfile from './pages/client/ClientCounsellorProfile';
 import CounsellorDoctors from './pages/counsellor/CounsellorDoctors';
 import CounsellorClients from './pages/counsellor/CounsellorClients';
+import CounsellorClientProfile from './pages/counsellor/CounsellorClientProfile';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                     <Route path="counsellorprofile" element={<CounsellorProfile />} />
                     <Route path='counsellordoctors' element={<CounsellorDoctors/>} />
                     <Route path="counsellorclients" element={<CounsellorClients/>} />
+                    <Route path="counsellorclients/profile" element={<CounsellorClientProfile/>} />
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
                 <Route path="logout" element={<div>this is logout page</div>} />

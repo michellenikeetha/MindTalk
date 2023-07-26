@@ -12,6 +12,8 @@ import ClientCounsellorProfile from './pages/client/ClientCounsellorProfile';
 import CounsellorDoctors from './pages/counsellor/CounsellorDoctors';
 import CounsellorClients from './pages/counsellor/CounsellorClients';
 import CounsellorClientProfile from './pages/counsellor/CounsellorClientProfile';
+import ClientAppointments from './pages/client/ClientAppointments';
+import CounsellorAppointments from './pages/counsellor/CounsellorAppointments';
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
                     <Route path='clientmusic' element={<ClientMusic />} />
                     <Route path='clientmeditation' element={<ClientMeditation />} />
                     <Route path='clientcounsellors/profile' element={<ClientCounsellorProfile/>} />
+                    <Route path='clientappointments' element={<ClientAppointments/>} />
                 </Route>
                 <Route path="/counsellor" element={<CounsellorLayout />}>
                     <Route index element={<CounsellorDashboard />} />
@@ -32,6 +35,7 @@ function App() {
                     <Route path='counsellordoctors' element={<CounsellorDoctors/>} />
                     <Route path="counsellorclients" element={<CounsellorClients/>} />
                     <Route path="counsellorclients/profile" element={<CounsellorClientProfile/>} />
+                    <Route path="counsellorappointments" element={<CounsellorAppointments/>} />
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
                 <Route path="logout" element={<div>this is logout page</div>} />

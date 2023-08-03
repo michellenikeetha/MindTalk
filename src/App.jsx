@@ -14,6 +14,7 @@ import CounsellorClients from './pages/counsellor/CounsellorClients';
 import CounsellorClientProfile from './pages/counsellor/CounsellorClientProfile';
 import ClientAppointments from './pages/client/ClientAppointments';
 import CounsellorAppointments from './pages/counsellor/CounsellorAppointments';
+import ClientCounsellorAppointments from './pages/client/ClientCounsellorAppointments';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                     <Route path='clientmeditation' element={<ClientMeditation />} />
                     <Route path='clientcounsellors/profile' element={<ClientCounsellorProfile/>} />
                     <Route path='clientappointments' element={<ClientAppointments/>} />
+                    <Route path='clientcounsellors/appointments' element={<ClientCounsellorAppointments/>} />
                 </Route>
                 <Route path="/counsellor" element={<CounsellorLayout />}>
                     <Route index element={<CounsellorDashboard />} />

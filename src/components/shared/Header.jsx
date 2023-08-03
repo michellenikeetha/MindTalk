@@ -1,10 +1,18 @@
-import React, {Fragment} from 'react'
-import { Popover, Transition, Menu } from '@headlessui/react'
-import classNames from 'classnames'
-import { useNavigate } from 'react-router-dom'
-import { FiBell } from 'react-icons/fi'
+import React, { Fragment, useState } from 'react';
+import { Popover, Transition, Menu } from '@headlessui/react';
+import classNames from 'classnames';
+import { useNavigate } from 'react-router-dom';
+import { FiBell } from 'react-icons/fi';
+
+const notificationList = [
+  'Appointment Reminder 01',
+  'Update Your profile Details',
+  'Important update available',
+];
+
 
 export default function Header() {
+    const [notifications, setNotifications] = useState(notificationList);
     const navigate = useNavigate()
     
   return (
@@ -12,6 +20,7 @@ export default function Header() {
         <div className='sm:flex md:flex float-right items-center py-4 pr-2 h-[64px] min-h-[64px]'>
     
             <div className='flex float-right items-center gap-2 mr-2'>
+
                 <Popover className="relative">
                     {({ open }) => (
                         <>
@@ -35,15 +44,22 @@ export default function Header() {
                                 <Popover.Panel className="absolute right-0 z-10 mt-2.5 w-80">
                                     <div className='bg-white rounded-sm shadow-md ring-1 ring-black ring-opacity-5 px-2 py-2.5'>
                                         <strong className='text-gray-700 font-medium'>Notifications</strong>
-                                        <div className='mt-2 py-1 text-sm'>
-                                            This is the notification panel
-                                        </div>
+                                        {notifications.length === 0 ? (
+                                            <div className="mt-2 py-1 text-sm text-gray-600">No new notifications</div>
+                                        ) : (
+                                            <div className="mt-2 py-1 text-sm">
+                                            {notifications.map((notification, index) => (
+                                                <div key={index}>{notification}</div>
+                                            ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </Popover.Panel>
                             </Transition>
                         </>
                     )}
                 </Popover>
+
                 <Menu as="div" className="relative">
                     <div>
                         <Menu.Button className="ml-2 inline-flex rounded-full focus:outline-none focus:ring-2 focus:ring-blue-700">
@@ -87,7 +103,7 @@ export default function Header() {
                                 )}
                             </Menu.Item>
                         </Menu.Items>
-                </Transition>
+                    </Transition>
                 </Menu>
             
             </div>

@@ -59,3 +59,46 @@ function SidebarLink({ item, isOpen }){
     </Link>
   )
 }
+
+// function SidebarLink({ item, isOpen }){
+
+//   const {pathname} = useLocation();
+//   const isActiveLink = pathname.startsWith(item.path);
+
+//   return(
+//     <Link to={item.path} className={classNames( 
+//       isActiveLink ? ' bg-blue-700 text-white' : 'text-neutral-500',linkClasses
+//       )} >
+//       <span className='text-xl'>{item.icon}</span>
+//       <span className={`text-base font-medium flex-1 duration-200`}>{isOpen && item.label}</span>
+//     </Link>
+//   )
+// }
+
+// function SidebarLink({ item, isOpen }) {
+//   const { pathname } = useLocation();
+
+//   // Check if the pathname starts with the item.path
+//   const isActiveLink = pathname.startsWith(item.path);
+
+//   // Check if it's the index path and the pathname is an exact match
+//   const isIndexPath = item.path === '/';
+//   const isExactMatch = item.path === pathname;
+
+//   return (
+//     <Link
+//       to={item.path}
+//       className={classNames(
+//         (isActiveLink || (isIndexPath && isExactMatch))
+//           ? ' bg-blue-700 text-white'
+//           : 'text-neutral-500',
+//         linkClasses
+//       )}
+//     >
+//       <span className='text-xl'>{item.icon}</span>
+//       <span className={`text-base font-medium flex-1 duration-200`}>
+//         {isOpen && item.label}
+//       </span>
+//     </Link>
+//   );
+// }

@@ -42,14 +42,16 @@ export default function Header() {
                                 leaveTo="opacity-0 translate-y-1"
                                 >
                                 <Popover.Panel className="absolute right-0 z-10 mt-2.5 w-80">
-                                    <div className='bg-white rounded-sm shadow-md ring-1 ring-black ring-opacity-5 px-2 py-2.5'>
+                                    <div className='bg-white rounded-md shadow-md ring-1 ring-black ring-opacity-5 px-2 py-2.5'>
                                         <strong className='text-gray-700 font-medium'>Notifications</strong>
                                         {notifications.length === 0 ? (
                                             <div className="mt-2 py-1 text-sm text-gray-600">No new notifications</div>
                                         ) : (
-                                            <div className="mt-2 py-1 text-sm">
+                                            <div className="mt-2 py-1 text-sm text-gray-600">
                                             {notifications.map((notification, index) => (
-                                                <div key={index}>{notification}</div>
+                                                <div 
+                                                    className='border-b border-gray-200 py-2 transition duration-300 ease-in-out hover:bg-neutral-100 cursor-pointer '
+                                                    key={index}>{notification}</div>
                                             ))}
                                             </div>
                                         )}

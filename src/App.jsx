@@ -15,6 +15,8 @@ import CounsellorClientProfile from './pages/counsellor/CounsellorClientProfile'
 import ClientAppointments from './pages/client/ClientAppointments';
 import CounsellorAppointments from './pages/counsellor/CounsellorAppointments';
 import ClientCounsellorAppointments from './pages/client/ClientCounsellorAppointments';
+import ModeratorLayout from './components/shared/ModeratorLayout'
+import ModeratorUserHandle from './pages/moderator/ModeratorUserHandle';
 
 
 function App() {
@@ -34,10 +36,14 @@ function App() {
                 <Route path="/counsellor" element={<CounsellorLayout />}>
                     <Route index element={<CounsellorDashboard />} />
                     <Route path="counsellorprofile" element={<CounsellorProfile />} />
-                    <Route path='counsellordoctors' element={<CounsellorDoctors/>} />
                     <Route path="counsellorclients" element={<CounsellorClients/>} />
                     <Route path="counsellorclients/profile" element={<CounsellorClientProfile/>} />
+                    <Route path="counsellorclients/profile/doctors" element={<CounsellorDoctors/>} />
                     <Route path="counsellorappointments" element={<CounsellorAppointments/>} />
+                </Route>
+                <Route path="/moderator" element={<ModeratorLayout />}>
+                    {/* <Route index element={<ModeratorDashboard />} /> */}
+                    <Route path="userhandle" element={<ModeratorUserHandle />} />
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
                 <Route path="logout" element={<div>this is logout page</div>} />

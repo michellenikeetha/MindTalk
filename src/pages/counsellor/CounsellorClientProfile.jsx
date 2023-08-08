@@ -6,7 +6,7 @@ function CounsellorClientProfile() {
   return (
     <div className='grid grid-cols-4 gap-5'>
 
-      <div className='bg-white h-80 rounded-xl'>
+      <div className='bg-white rounded-xl'>
         <ClientProfileCard />
       </div>
 

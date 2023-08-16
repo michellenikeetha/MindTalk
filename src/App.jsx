@@ -17,6 +17,8 @@ import CounsellorAppointments from './pages/counsellor/CounsellorAppointments';
 import ClientCounsellorAppointments from './pages/client/ClientCounsellorAppointments';
 import ModeratorLayout from './components/shared/ModeratorLayout'
 import ModeratorUserHandle from './pages/moderator/ModeratorUserHandle';
+import ModeratorMusic from './pages/moderator/ModeratorMusic';
+import AddMusic from './components/moderator/AddMusic';
 
 
 function App() {
@@ -44,6 +46,8 @@ function App() {
                 <Route path="/moderator" element={<ModeratorLayout />}>
                     {/* <Route index element={<ModeratorDashboard />} /> */}
                     <Route path="userhandle" element={<ModeratorUserHandle />} />
+                    <Route path="moderatormusic" element={<ModeratorMusic />} />
+                    <Route path='add-music/:id' element = {<AddMusic />} />
                 </Route>
                 <Route path="login" element={<div>this is login page</div>}/>
                 <Route path="logout" element={<div>this is logout page</div>} />
